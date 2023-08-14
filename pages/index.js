@@ -1,6 +1,6 @@
 import React from "react";
 import useSWR from "swr";
-import ArtPieces from "../Components/ArtPieces";
+import ArtPieces from "../Components/ArtPieces/ArtPieces";
 
 const URL = "https://example-apis.vercel.app/api/art";
 
