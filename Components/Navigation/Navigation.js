@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
+
     <section className="navbar-container">
       <nav className="navbar">
         <Link href="/" className="navbar__spotlight">
