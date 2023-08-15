@@ -33,6 +33,7 @@ export default function ArtPieces({ pieces }) {
             image={piece.imageSource}
             title={piece.name}
             artist={piece.artist}
+            slug={piece.slug}
           />
         );
       })}
