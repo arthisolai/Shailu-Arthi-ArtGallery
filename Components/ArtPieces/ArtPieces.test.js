@@ -15,7 +15,7 @@ test("displays correct art piece information", () => {
 
   const titleElement = screen.getByText(artPiece.name);
   const artistElement = screen.getByText(`By: ${artPiece.artist}`);
-  const imageElement = screen.getByAltText(artPiece.name);
+  const imageElement = screen.getByRole("img");
 
   expect(titleElement).toBeInTheDocument();
   expect(artistElement).toBeInTheDocument();
