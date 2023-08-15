@@ -3,19 +3,23 @@ import ArtPiecePreview from "../ArtPiecePreview/ArtPiecePreview";
 
 export default function ArtPieces({ pieces, artPiecesInfo, toggleFavorite }) {
   return (
-    <div className="art-pieces">
-      {pieces.map((piece) => (
-        <ArtPiecePreview
-          key={piece.slug}
-          image={piece.imageSource}
-          title={piece.name}
-          artist={piece.artist}
-          slug={piece.slug}
-          artPiecesInfo={artPiecesInfo[piece.slug]?.isFavorite}
-          toggleFavorite={toggleFavorite(piece.slug)}
-        />
-      ))}
-    </div>
+    <>
+      <h2>Art Pieces</h2>
+
+      <div className="art-pieces">
+        {pieces.map((piece) => (
+          <ArtPiecePreview
+            key={piece.slug}
+            image={piece.imageSource}
+            title={piece.name}
+            artist={piece.artist}
+            slug={piece.slug}
+            artPiecesInfo={artPiecesInfo[piece.slug]?.isFavorite}
+            toggleFavorite={toggleFavorite(piece.slug)}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
