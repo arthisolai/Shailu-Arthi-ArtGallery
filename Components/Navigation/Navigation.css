@@ -1,0 +1,35 @@
+.navbar-container {
+  background-color: black;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 99;
+}
+
+.navbar__spotlight,
+.navbar__art-pieces,
+.navbar__favourites {
+  width: calc(100vw / 3);
+}
+
+.navbar__spotlight:hover,
+.navbar__art-pieces:hover,
+.navbar__favourites:hover {
+  background-color: grey;
+  width: calc(100vw / 3);
+}
+
+.navbar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
