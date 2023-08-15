@@ -1,6 +1,6 @@
 import React from "react";
 import useSWR from "swr";
-import { Spotlight } from "../Components/Spotlight";
+import { Spotlight } from "../Components/SpotLight/Spotlight";
 
 export default function SpotlightPage({ artPieces }) {
   function getRandomArtPiece(artPieces) {
