@@ -8,14 +8,14 @@ export default function ArtPiecePreview({
   title,
   artist,
   slug,
-  isFavorite,
+  artPieceInfo,
   toggleFavorite,
 }) {
   console.log(image, title, artist);
   return (
     <div className="art-piece-preview">
       <FavoriteButton
-        isFavorite={isFavorite}
+        isFavorite={artPieceInfo}
         onToggleFavorite={() => toggleFavorite(slug)}
       />
       <Link href={`/art-pieces/${slug}`}>
