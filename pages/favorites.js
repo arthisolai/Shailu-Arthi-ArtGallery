@@ -12,7 +12,11 @@ export default function FavoritesPage({
   return (
     <div>
       <h1>My Favorites</h1>
-      <ArtPieces pieces={favoritePieces} onToggleFavorite={onToggleFavorite} />
+      <ArtPieces
+        pieces={favoritePieces}
+        artPiecesInfo={artPiecesInfo}
+        onToggleFavorite={onToggleFavorite}
+      />
     </div>
   );
 }
