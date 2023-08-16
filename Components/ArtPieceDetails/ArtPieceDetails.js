@@ -32,17 +32,16 @@ export default function ArtPieceDetails({
   return (
     <>
       <div className="art-piece-details">
-        <Image src={image} alt={title} width={500} height={500} />
-        <FavoriteButton
-          isFavorite={isFavorite}
-          onToggleFavorite={onToggleFavorite}
-          slug={slug}
-        />
         <h2>{title}</h2>
         <Image src={image} alt={title} width={500} height={500} />
         <p>Artist: {artist}</p>
         <p>Year: {year}</p>
         <p>Genre: {genre}</p>
+        <FavoriteButton
+          isFavorite={isFavorite}
+          onToggleFavorite={onToggleFavorite}
+          slug={slug}
+        />
         <Comment comments={comments} />
         <CommentForm onSubmitComment={handleCommentSubmit} />
       </div>
