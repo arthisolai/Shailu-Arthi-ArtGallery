@@ -5,12 +5,17 @@ import { useState } from "react";
 import "../Components/Navigation/Navigation.css";
 import "../Components/SpotLight/Spotlight.css";
 import "../Components/ArtPieces/ArtPieces.css";
+import { useImmerLocalStorageState } from "../Hook/UseImmerLocalStorageState";
 
 const URL = "https://example-apis.vercel.app/api/art";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function App({ Component, pageProps }) {
-  const [artPiecesInfo, setArtPiecesInfo] = useState({});
+  // const [artPiecesInfo, setArtPiecesInfo] = useState({});
+  const [artPiecesInfo, setArtPiecesInfo] = useImmerLocalStorageState(
+    "art-pieces-info",
+    { defaultValue: [] }
+  );
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: artPieces, error, isLoading } = useSWR(URL, fetcher);
   if (error) {
