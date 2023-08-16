@@ -11,7 +11,9 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: system-ui;
-    background:#F4F2DE
+    background:#F4F2DE;
+    display:flex;
+    justify-content: center;
   
 
   }

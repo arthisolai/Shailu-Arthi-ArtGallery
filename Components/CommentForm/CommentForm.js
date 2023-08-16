@@ -34,15 +34,18 @@ export default function CommentForm({ slug, artPiecesInfo, setArtPiecesInfo }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="comment-form">
       <input
         type="text"
         value={artPiecesInfo[slug]?.currentComment || ""}
         onChange={handleCommentChange}
         placeholder="Write a comment..."
         required
+        className="comment-input"
       />
-      <button type="submit">Send</button>
+      <button type="submit" className="comment-submit-button">
+        Send
+      </button>
     </form>
   );
 }
