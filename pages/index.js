@@ -29,7 +29,20 @@ export default function SpotlightPage({
   console.log("SpotlightPage onToggleFavorite:", onToggleFavorite);
   return (
     <div>
-      <h1>Art Gallery</h1>
+
+       <h1
+        style={{
+          textAlign: "center",
+          backgroundColor: "#A1CCD1",
+          padding: "30px",
+          margin: "0",
+          marginTop: "0",
+          marginBottom: "40px",
+        }}
+      >
+        Art-Gallery App
+      </h1>
+
 
       <Spotlight
         image={spotlight.imageSource}

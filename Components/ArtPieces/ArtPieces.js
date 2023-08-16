@@ -7,6 +7,8 @@ export default function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
   console.log("artPiecesInfo in ArtPieces component:", artPiecesInfo);
 
   return (
+         <>
+           <h2>Art Pieces</h2>
     <div className="art-pieces">
       {pieces.map((piece) => (
         <ArtPiecePreview
@@ -26,5 +28,6 @@ export default function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
         onToggleFavorite={onToggleFavorite}
       />
     </div>
+  </>
   );
 }

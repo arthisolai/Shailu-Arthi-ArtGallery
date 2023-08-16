@@ -1,0 +1,27 @@
+.art-piece-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.art-piece-details h2 {
+  margin: 10px 0;
+}
+
+.art-piece-details p {
+  margin: 5px 0;
+}
+
+.art-piece-details .image-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+.art-piece-details img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}

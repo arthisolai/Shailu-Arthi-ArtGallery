@@ -2,6 +2,9 @@ import Layout from "../Components/Layout/Layout";
 import GlobalStyle from "../styles";
 import useSWR from "swr";
 import { useState } from "react";
+import "../Components/Navigation/Navigation.css";
+import "../Components/SpotLight/Spotlight.css";
+import "../Components/ArtPieces/ArtPieces.css";
 
 const URL = "https://example-apis.vercel.app/api/art";
 const fetcher = (url) => fetch(url).then((res) => res.json());
