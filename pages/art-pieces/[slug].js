@@ -33,6 +33,7 @@ export default function ArtPieceDetailPage({
         slug={slug}
         artPiecesInfo={artPiecesInfo}
         setArtPiecesInfo={setArtPiecesInfo}
+        artPieces={artPiece}
       />
     </div>
   );
