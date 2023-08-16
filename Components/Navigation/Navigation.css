@@ -1,6 +1,6 @@
 .navbar-container {
   background: #e9b384;
-  height: 10vh;
+  height: 5vh;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -32,5 +32,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 20px;
 }
