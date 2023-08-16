@@ -29,10 +29,10 @@ export default function ArtPieces({
             onToggleFavorite={onToggleFavorite}
           />
         ))}
-        <FavoriteButton
+        {/* <FavoriteButton
           isFavorite={pieces.slug}
           onToggleFavorite={onToggleFavorite}
-        />
+        /> */}
       </div>
     </>
   );
