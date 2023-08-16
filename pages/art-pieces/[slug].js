@@ -5,6 +5,7 @@ export default function ArtPieceDetailPage({
   artPieces,
   onToggleFavorite,
   artPiecesInfo,
+  setArtPiecesInfo,
 }) {
   // console.log("artPieces", artPieces);
   console.log("onToggleFavorite in ArtPieceDetailPage:", onToggleFavorite);
@@ -31,6 +32,7 @@ export default function ArtPieceDetailPage({
         onToggleFavorite={onToggleFavorite}
         slug={slug}
         artPiecesInfo={artPiecesInfo}
+        setArtPiecesInfo={setArtPiecesInfo}
       />
     </div>
   );
