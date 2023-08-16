@@ -4,16 +4,23 @@ import FavoriteButton from "../Favorite/FavoriteButton";
 import CommentForm from "../CommentForm/CommentForm";
 import Comment from "../Comments/Comments.js"; // Adjust the path as needed
 
-export default function ArtPieceDetails({ image, title, artist, year, genre, slug,
+export default function ArtPieceDetails({
+  image,
+  title,
+  artist,
+  year,
+  genre,
+  slug,
   onToggleFavorite,
-  artPiecesInfo,}) {
+  artPiecesInfo,
+}) {
   const [comments, setComments] = useState([]);
   console.log("ArtPieceDetailPage re-rendered");
   const isFavorite = artPiecesInfo[slug]?.isFavorite;
 
   const handleCommentSubmit = (commentText) => {
     if (commentText.trim() !== "") {
-      const currentDate = new Date().toLocaleDateString(); // Get the current date
+      const currentDate = new Date().toLocaleDateString();
       const newComment = {
         comment: commentText,
         date: currentDate,
@@ -24,16 +31,14 @@ export default function ArtPieceDetails({ image, title, artist, year, genre, slu
 
   return (
     <>
-    <div className="art-piece-details">
-      <Image src={image} alt={title} width={500} height={500} />
-      <FavoriteButton
-        isFavorite={isFavorite}
-        onToggleFavorite={onToggleFavorite}
-        slug={slug}
-      />
-      <h2>{title}</h2>
-
       <div className="art-piece-details">
+        <Image src={image} alt={title} width={500} height={500} />
+        <FavoriteButton
+          isFavorite={isFavorite}
+          onToggleFavorite={onToggleFavorite}
+          slug={slug}
+        />
+        <h2>{title}</h2>
         <Image src={image} alt={title} width={500} height={500} />
         <p>Artist: {artist}</p>
         <p>Year: {year}</p>

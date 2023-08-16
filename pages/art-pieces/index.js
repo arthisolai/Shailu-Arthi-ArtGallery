@@ -6,6 +6,8 @@ export default function ArtPiecesPage({
   onToggleFavorite,
 }) {
   console.log("onToggleFavorite in ArtPiecesPage:", onToggleFavorite);
+  console.log("artPiecesInfo in ArtPiecesPage:", artPiecesInfo);
+
 
   return (
     <ArtPieces
