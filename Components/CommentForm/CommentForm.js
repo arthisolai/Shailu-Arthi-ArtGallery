@@ -16,7 +16,7 @@ export default function CommentForm({ slug, artPiecesInfo, setArtPiecesInfo }) {
         [slug]: {
           ...prevInfo[slug],
           comments: [...currentComments, newComment],
-          currentComment: "", // Clear the current comment
+          currentComment: "",
         },
       };
     });
