@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import FavoriteButton from "../Favorite/FavoriteButton";
 import CommentForm from "../CommentForm/CommentForm";
-import Comment from "../Comments/Comments.js"; // Adjust the path as needed
+import Comments from "../Comments/Comments";
 
 export default function ArtPieceDetails({
   image,
@@ -13,6 +13,7 @@ export default function ArtPieceDetails({
   slug,
   onToggleFavorite,
   artPiecesInfo,
+  setArtPiecesInfo,
 }) {
   const [comments, setComments] = useState([]);
   console.log("ArtPieceDetailPage re-rendered");
@@ -42,8 +43,12 @@ export default function ArtPieceDetails({
           onToggleFavorite={onToggleFavorite}
           slug={slug}
         />
-        <Comment comments={comments} />
-        <CommentForm onSubmitComment={handleCommentSubmit} />
+        <Comments comments={artPiecesInfo[slug]?.comments || []} />
+        <CommentForm
+          slug={slug}
+          artPiecesInfo={artPiecesInfo}
+          setArtPiecesInfo={setArtPiecesInfo}
+        />
       </div>
     </>
   );

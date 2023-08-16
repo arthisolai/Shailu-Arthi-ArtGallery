@@ -51,6 +51,7 @@ export default function App({ Component, pageProps }) {
           {...pageProps}
           artPieces={artPieces}
           artPiecesInfo={artPiecesInfo}
+          setArtPiecesInfo={setArtPiecesInfo}
           onToggleFavorite={handleToggleFavourite}
         />
       </Layout>
