@@ -5,7 +5,7 @@ import { useState } from "react";
 import "../Components/Navigation/Navigation.css";
 import "../Components/SpotLight/Spotlight.css";
 import "../Components/ArtPieces/ArtPieces.css";
-import { useImmerLocalStorageState } from "../Hook/UseImmerLocalStorageState";
+import { useImmerLocalStorageState } from "../Hook/useImmerLocalStorageState";
 
 const URL = "https://example-apis.vercel.app/api/art";
 const fetcher = (url) => fetch(url).then((res) => res.json());
