@@ -3,10 +3,10 @@ import ArtPieces from "../../Components/ArtPieces/ArtPieces";
 export default function ArtPiecesPage({
   artPieces,
   artPiecesInfo,
-  toggleFavorite,
+  onToggleFavorite,
 }) {
-  //   return <ArtPieces pieces={artPieces} />;
-  console.log("artPieces", artPieces);
+  console.log("onToggleFavorite in ArtPiecesPage:", onToggleFavorite);
+
   return (
     <ArtPieces
       key={artPieces.slug}
@@ -15,7 +15,7 @@ export default function ArtPiecesPage({
       artist={artPieces.artist}
       pieces={artPieces}
       artPiecesInfo={artPiecesInfo}
-      toggleFavorite={toggleFavorite}
+      onToggleFavorite={onToggleFavorite}
     />
   );
 }

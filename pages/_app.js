@@ -10,8 +10,8 @@ const URL = "https://example-apis.vercel.app/api/art";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function App({ Component, pageProps }) {
-  const [artPiecesInfo, setArtPiecesInfo] = useState([]);
-
+  const [artPiecesInfo, setArtPiecesInfo] = useState({});
+  const fetcher = (url) => fetch(url).then((res) => res.json());
   const { data: artPieces, error, isLoading } = useSWR(URL, fetcher);
   if (error) {
     return <div>Failed to Load...</div>;
@@ -19,16 +19,23 @@ export default function App({ Component, pageProps }) {
   if (isLoading) {
     return <div>Loading...</div>;
   }
+  console.log("artPiecesInfo in App:", artPiecesInfo);
 
-  const toggleFavorite = (slug) => {
+  function handleToggleFavourite(slug) {
+    if (!slug) {
+      console.error("Slug is undefined!");
+      return;
+    }
     setArtPiecesInfo((prevInfo) => ({
       ...prevInfo,
-      // [slug]: {
-      //   ...prevInfo[slug],
-      //   isFavorite: !prevInfo[slug]?.isFavorite,
-      // },
+      [slug]: {
+        isFavorite: !prevInfo[slug]?.isFavorite,
+      },
     }));
-  };
+    console.log("Updated artPiecesInfo:", artPiecesInfo);
+  }
+
+  console.log("onToggleFavorite in App:", handleToggleFavourite);
 
   return (
     <>
@@ -39,7 +46,7 @@ export default function App({ Component, pageProps }) {
           {...pageProps}
           artPieces={artPieces}
           artPiecesInfo={artPiecesInfo}
-          toggleFavorite={toggleFavorite}
+          onToggleFavorite={handleToggleFavourite}
         />
       </Layout>
     </>
