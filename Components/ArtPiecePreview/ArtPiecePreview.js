@@ -17,7 +17,8 @@ export default function ArtPiecePreview({
 
   console.log("slug:", slug);
 
-  const isFavorite = artPiecesInfo[slug]?.isFavorite;
+  // const isFavorite = artPiecesInfo[slug]?.isFavorite;
+  const isFavorite = artPiecesInfo && artPiecesInfo[slug]?.isFavorite;
 
   return (
     <div className="art-piece-preview">
